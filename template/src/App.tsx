@@ -1,4 +1,4 @@
-import SampleComponent from '@/components/Example';
+import SampleComponent from '@/components/SampleComponent';
 
 export default function App() {
   return (

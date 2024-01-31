@@ -2,9 +2,9 @@ module.exports = {
   root: true,
   env: {
     node: true,
-    es6: true,
+    browser: true,
   },
-  parserOptions: { ecmaVersion: 8, sourceType: 'module' },
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module', ecmaFeatures: { jsx: true } },
   ignorePatterns: ['node_modules/*'],
   extends: ['eslint:recommended'],
   overrides: [

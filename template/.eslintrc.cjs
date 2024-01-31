@@ -60,6 +60,7 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
 
         'jsx-a11y/anchor-is-valid': 'off',
+        'import/no-unresolved': 'off',
 
         '@typescript-eslint/no-unused-vars': ['error'],
 

@@ -9,7 +9,7 @@ module.exports = {
   extends: ['eslint:recommended'],
   overrides: [
     {
-      files: ['**/*.ts', '**/*.tsx'],
+      files: ['**/*.ts', '**/*.tsx','**/*.test.tsx'],
       parser: '@typescript-eslint/parser',
       settings: {
         react: { version: 'detect' },
@@ -18,6 +18,7 @@ module.exports = {
         },
       },
       env: {
+        jest:true,
         browser: true,
         node: true,
         es6: true,

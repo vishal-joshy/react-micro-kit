@@ -1,6 +1,6 @@
 {
   "name": "react-xyz-template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "bin": {
     "react-xyz-template": "index.js"

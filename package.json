@@ -1,15 +1,19 @@
 {
   "name": "react-xyz-template",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "",
   "bin": {
-    "react-xyz-template": "index.js"
+    "react-xyz-template": "./dist/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "pub:release":"npm run build && npm publish"
   },
   "author": "vishal-joshy",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "prompts": "^2.4.2"

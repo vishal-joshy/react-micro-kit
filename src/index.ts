@@ -6,7 +6,7 @@ import fs from "node:fs";
 import prompts from "prompts";
 
 async function main() {
-  let result;
+  let result: prompts.Answers<"projectName">;
 
   try {
     result = await prompts({
@@ -14,8 +14,9 @@ async function main() {
       name: "projectName",
       message: "Enter project name",
     });
-  } catch (e) {
+  } catch (e: any) {
     console.error(e);
+    return;
   }
 
   const cwd = process.cwd();
@@ -25,11 +26,11 @@ async function main() {
 
   const templateDir = path.resolve(
     fileURLToPath(import.meta.url),
-    "../",
+    "../..",
     "template"
   );
 
-  function formatTargetDir(targetDir) {
+  function formatTargetDir(targetDir: string) {
     return targetDir?.trim().replace(/\/+$/g, "");
   }
 
@@ -38,7 +39,7 @@ async function main() {
     _gitignore: ".gitignore",
   };
 
-  function copy(src, dest) {
+  function copy(src: string, dest: string) {
     const stat = fs.statSync(src);
     if (stat.isDirectory()) {
       copyDir(src, dest);
@@ -46,7 +47,7 @@ async function main() {
       fs.copyFileSync(src, dest);
     }
   }
-  const write = (file, content) => {
+  const write = (file: string, content?: string) => {
     const targetPath = path.join(root, renameFiles[file] ?? file);
     if (content) {
       fs.writeFileSync(targetPath, content);
@@ -63,11 +64,10 @@ async function main() {
   );
 
   pkg.name = result.projectName;
-  console.log(pkg)
 
   write("package.json", JSON.stringify(pkg, null, 2) + "\n");
 
-  function copyDir(srcDir, destDir) {
+  function copyDir(srcDir: string, destDir: string) {
     fs.mkdirSync(destDir, { recursive: true });
     for (const file of fs.readdirSync(srcDir)) {
       const srcFile = path.resolve(srcDir, file);

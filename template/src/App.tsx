@@ -1,9 +1,12 @@
-import SampleComponent from '@/components/SampleComponent';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SamplePage from './pages/SamplePage/SamplePage';
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      <SampleComponent />
-    </h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SamplePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

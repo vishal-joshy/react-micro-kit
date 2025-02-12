@@ -8,8 +8,8 @@
 
 ### Templates
 - Default - React app with opinionated libraries and tooling
-- Micro-Frontned - Remote Microfront end app.
-- Micro-Frontend shell - Microfront end host app.
+- Micro-Frontned - Remote Micro-frontend app.
+- Micro-Frontend shell - Micro-frontend host app.
 
 ## Getting Started
 

@@ -6,6 +6,11 @@
 - Vite : Bundles and optimizes code for efficient deployment
 - Shared Components : Encourages component sharing for consistent user experiences.
 
+### Templates
+- Default - React app with opinionated libraries and tooling
+- Micro-Frontned - Remote Microfront end app.
+- Micro-Frontend shell - Microfront end host app.
+
 ## Getting Started
 
 Follow these steps to kickstart your developement using React templates

@@ -6,6 +6,16 @@
 - Vite : Bundles and optimizes code for efficient deployment
 - Shared Components : Encourages component sharing for consistent user experiences.
 
+## Getting Started
+
+Follow these steps to kickstart your developement using chistadata UI templates
+
+```
+npx react-xyz-template
+```
+
+And follow prompts
+
 ## Requirements
 [NodeJs](https://nodejs.org/en)
 

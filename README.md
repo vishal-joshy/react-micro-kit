@@ -8,7 +8,7 @@
 
 ## Getting Started
 
-Follow these steps to kickstart your developement using chistadata UI templates
+Follow these steps to kickstart your developement using React templates
 
 ```
 npx react-xyz-template
